@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-[#573cff] hover:bg-[#573cff]/80 text-white rounded-lg 
+    transition-all duration-200 font-semibold shadow-lg hover:shadow-[#573cff]/50;
+  }
+  
+  .card {
+    @apply p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700
+    hover:border-[#573cff]/50 transition-all duration-300
+    hover:shadow-lg hover:shadow-[#573cff]/20;
+  }
+
+  .auth-container {
+    @apply w-full;
+  }
+
+  .auth-button {
+    @apply w-full bg-[#573cff] hover:bg-[#573cff]/80 text-white rounded-lg 
+    transition-all duration-200 font-semibold shadow-lg hover:shadow-[#573cff]/50
+    py-2 px-4 mb-2;
+  }
+
+  .auth-input {
+    @apply w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2
+    focus:outline-none focus:ring-2 focus:ring-[#573cff]/50 focus:border-[#573cff]
+    text-white placeholder-gray-400;
+  }
+}
