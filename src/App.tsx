@@ -4,6 +4,12 @@ import { useEffect, useState } from 'react';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
 import Layout from './components/Layout';
+import Profile from './pages/Profile';
+import SoccerHub from './pages/SoccerHub';
+import SoccerProfile from './pages/SoccerProfile';
+import Play from './pages/soccer/Play';
+import Lobby from './pages/soccer/Lobby';
+import Match from './pages/soccer/Match';
 import { supabase } from './lib/supabase';
 
 function App() {
@@ -40,10 +46,30 @@ function App() {
             path="/auth" 
             element={user ? <Navigate to="/" replace /> : <Auth />} 
           />
-          <Route path="/teams" element={<div className="p-8">Teams page coming soon...</div>} />
-          <Route path="/matches" element={<div className="p-8">Matches page coming soon...</div>} />
-          <Route path="/tournaments" element={<div className="p-8">Tournaments page coming soon...</div>} />
-          <Route path="/settings" element={<div className="p-8">Settings page coming soon...</div>} />
+          <Route 
+            path="/profile" 
+            element={user ? <Profile /> : <Navigate to="/auth" replace />} 
+          />
+          <Route 
+            path="/soccer/*" 
+            element={user ? <SoccerHub /> : <Navigate to="/auth" replace />} 
+          />
+          <Route 
+            path="/soccer/profile" 
+            element={user ? <SoccerProfile /> : <Navigate to="/auth" replace />} 
+          />
+          <Route 
+            path="/soccer/play" 
+            element={user ? <Play /> : <Navigate to="/auth" replace />} 
+          />
+          <Route 
+            path="/soccer/lobby" 
+            element={user ? <Lobby /> : <Navigate to="/auth" replace />} 
+          />
+          <Route 
+            path="/soccer/match/:id" 
+            element={user ? <Match /> : <Navigate to="/auth" replace />} 
+          />
         </Routes>
       </Layout>
     </Router>

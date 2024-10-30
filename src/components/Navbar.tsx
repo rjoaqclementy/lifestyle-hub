@@ -22,9 +22,9 @@ const Navbar = () => {
               <img
                 className="h-8 w-auto"
                 src="https://gfcesyuegnfgyntvqsmv.supabase.co/storage/v1/object/public/Public/logo.png"
-                alt="Soccer Hub"
+                alt="Lifestyle Hub"
               />
-              <span className="ml-2 text-xl font-bold text-white">Soccer Hub</span>
+              <span className="ml-2 text-xl font-bold text-white">Lifestyle Hub</span>
             </Link>
           </div>
 

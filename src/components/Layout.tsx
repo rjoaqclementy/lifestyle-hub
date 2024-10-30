@@ -31,7 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       {user ? (
         <div className="flex">
           <Sidebar />
-          <div className="flex-1 ml-64">
+          <div className="flex-1 pl-[4.5rem]">
             <main>{children}</main>
           </div>
         </div>
